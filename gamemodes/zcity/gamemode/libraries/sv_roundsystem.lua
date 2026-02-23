@@ -8,7 +8,7 @@ function zb.AddFade()
 	net.Broadcast()
 end
 
-local setweightconvar = CreateConVar("zb_roundweight", 1, nil, "Sets if alternate weight config is used or not to ensure more base Homicide rounds")
+local setweightconvar = CreateConVar("zb_roundweight", 1, FCVAR_ARCHIVE + FCVAR_REPLICATED + FCVAR_NOTIFY, "Sets if alternate weight config is used or not to ensure more base Homicide rounds", 0, 1)
 local forcemodeconvar = CreateConVar("zb_forcemode", "random", nil, "Set force mode (set to 'random' to disable)")
 forcemodeconvar:SetString("random")
 function zb:GetMode(round)
